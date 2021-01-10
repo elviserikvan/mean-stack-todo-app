@@ -16,4 +16,8 @@ export class TodosComponent implements OnInit {
 	  this.todos = this.todoService.getTodos();
   }
 
+  addTodo(todo) {
+	todo.id = Math.floor(Math.random() * (50 - 4)) + 4;
+	this.todos.push(todo);
+  }
 }
