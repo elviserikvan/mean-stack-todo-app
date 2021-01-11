@@ -1,27 +1,40 @@
-# MeanTodosList
+# MEAN Stack Todo List
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+I built this project for learning the MEAN Stack. This proyect has all the CRUD functionalities.
 
-## Development server
+## Technologies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Front-End
+	- Angular
+	- Bootstrap
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Back-End
+	- NodeJS
+	- Express
+	- Mongoose
 
-## Build
+Database
+	- MongoDB
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Use from source
 
-## Running unit tests
+First rename the file `config/keys.js.exemple` to `config/keys.js` and add your MongoDB connection URL to the `mongooseURI` key.
+Make sure to have a collection called `todos` in your mongodb database.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A todo should have the following fields in the database
+```
+{
+	id: <Object id>,
+	title: <string>,
+	completed: <boolean>
+}
+```
 
-## Running end-to-end tests
+Now, compile the angular typescript code. `npm run build`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+now, all you gotta do is start the server
+```
+node app.js
+```
