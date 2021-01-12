@@ -7,3 +7,9 @@ button {
 	color: red;
 	background-color: transparent;
 }
+
+.completed {
+	p {
+		text-decoration: line-through;
+	}
+}

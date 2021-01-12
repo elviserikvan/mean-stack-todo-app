@@ -13,6 +13,7 @@ router.post('/', (req, res) => {
 		completed: req.body.completed
 	}
 
+
 	let newTodo = new Todos(todo);
 	newTodo.save((err, doc) => {
 		if(err) {

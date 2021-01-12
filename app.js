@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys.js');
 const db = require('./models/mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 
 const PORT = process.env.PORT || 3000;
@@ -14,6 +15,13 @@ mongoose.connection.on('error', (err) => console.log('DB Error: ', err))
 
 // Body parser
 app.use(bodyParser.urlencoded({extended: false}))
+
+// Cors
+let corsOptions = {
+	origin: '*',
+	optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
 
 app.use('/api', require('./api-routes/api'));
 
