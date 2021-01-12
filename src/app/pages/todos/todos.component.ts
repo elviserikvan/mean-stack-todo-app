@@ -23,4 +23,10 @@ export class TodosComponent implements OnInit {
 		this.todos.push(t);
 	});
   }
+
+  deleteTodo(todo) {
+	  this.todoService.deleteTodo(todo._id).subscribe(resp => {
+		  this.todos = this.todos.filter(t => t._id != todo._id);
+	  });
+  }
 }

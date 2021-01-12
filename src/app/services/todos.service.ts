@@ -31,5 +31,9 @@ export class TodosService {
   updateTodo(id):Observable<Todo> {
 	return this.http.put<Todo>(`${this.apiURL}/${id}`, {});
   }
+
+  deleteTodo(id):Observable<any> {
+  	return this.http.delete<Todo>(`${this.apiURL}/${id}`, {});
+  }
   
 }
