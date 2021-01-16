@@ -38,3 +38,7 @@ now, all you gotta do is start the server
 ```
 node app.js
 ```
+
+## Screenshot
+
+![Screenshot](https://github.com/elviserikvan/mean-stack-todo-app/blob/main/screenshots/screenshot.jpg "Screenshot")
