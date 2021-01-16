@@ -8,22 +8,33 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/', (req, res) => {
-	let todo = {
-		title: req.body.title,
-		completed: req.body.completed
-	}
 
-
-	let newTodo = new Todos(todo);
-	newTodo.save((err, doc) => {
-		if(err) {
-			console.log(err)
-			res.json({'error': err})
+	// Check if title is empty
+	if (req.body.title == '') {
+		res.json({
+			error: true,
+			message: 'Title cannot be empty'
+		})
+	}else {
+	// Title is not empty
+		let todo = {
+			title: req.body.title,
+			completed: false
 		}
 
 
-		res.json(doc);
-	})
+		let newTodo = new Todos(todo);
+		newTodo.save((err, doc) => {
+			if(err) {
+				console.log(err)
+				res.json({'error': err})
+			}
+
+
+			res.json(doc);
+		})
+	}
+
 
 })
 

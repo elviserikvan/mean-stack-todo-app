@@ -19,6 +19,11 @@ export class AddTodoComponent implements OnInit {
   }
 
   onSubmit() {
+
+	  if(this.title == '' || this.title == undefined) {
+	  	return;
+	  }
+
 	  let todo = {
 	  	title: this.title,
 		completed: false
