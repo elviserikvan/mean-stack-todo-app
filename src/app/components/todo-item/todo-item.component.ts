@@ -32,10 +32,13 @@ export class TodoItemComponent implements OnInit {
   }
 
   setCompleted() {
-  	this.todo.completed = !this.todo.completed;
+//  	this.todo.completed = !this.todo.completed;
+	this.todo = this.todoService.updateTodo(this.todo);
+	/*
 	this.todoService.updateTodo(this.todo._id).subscribe(t => {
 		
 	});
+       */
   }
 
   onDelete() {
