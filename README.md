@@ -2,6 +2,9 @@
 
 I built this project for learning the MEAN Stack. This proyect has all the CRUD functionalities.
 
+## About this Branch
+If I'm not mistaking it should be the `Portfolio` branch. The reason why I created this branch is because I need a different versio of this project to publish on my portfolio, publishing a app connected to a database doesn't seem like a good idea, It doesn't matter how many verifycation and constrains I put, there always will be vulnerabilities and something to tweak, it's easier to just keep the Front-End working and let the Back-End do the minimun.
+
 ## Technologies
 
 Front-End
